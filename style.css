@@ -226,6 +226,8 @@ margin-left: 115px;
   padding-bottom: 20px;
   margin-bottom: 55px;
   text-align: center;
+  border-bottom-left-radius:50px;
+  border-bottom-right-radius:50px ;
 }
  
 /* When you mouse over the container, fade in the overlay title */
