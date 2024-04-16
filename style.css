@@ -968,6 +968,8 @@ button[type="button"]:hover {
   .logo {
     max-height: 70px;
   }
+  
+  
  
   .content {
     padding:0%;
@@ -1089,6 +1091,7 @@ button[type="button"]:hover {
  .d-flex #myLinks{
   display: none;
  }
+ 
 }
  
 /* navbar ul and services ul*/
@@ -1218,4 +1221,20 @@ li.dropdown {
 @keyframes animatebottom { 
   from{ bottom:-100px; opacity:0 } 
   to{ bottom:0; opacity:1 }
+}
+@media (max-width: 430px) {
+  
+nav {
+  display: list-item;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.logo{
+  margin-right: 10rem;
+}
+
+nav .container {
+  margin-top: 20px;
+}
 }
