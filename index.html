@@ -30,7 +30,7 @@
         <div class="dropdown-content">
           <a href="services.html">PACKAGES</a>
           <a href="services.html">GALLERY</a>
-          <a href="itinerary.html">COUPLE'S ITINERARY</a>
+          <a href="itinerary.html">COUPLE'S <br>ITINERARY</a>
         </div>
       </li>
       <li><a href="places.html">PLACES TO VISIT</a></li>
@@ -92,31 +92,41 @@
 <footer><small> <p>&copy; 2024 Techno Champs Tours</p></small></footer>
 </div>
 <!--End of Homepage -->
+<script>
+  function myFunction(){
+    var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+  // Array of images
+  var images = ["/images/capeTownSandy.jpg", "/images/capeTownTourists.jpg", "/images/back2.jpg", "/images/godsWindow.jpg","/images/mpumalangaTourist.jpg"];
+  var index = 0;
+  var intervalId;
+  
+  // Function to change the background image
+  function changeBackground() {
+    document.querySelector(".home").style.backgroundImage = "url(" + images[index] + ")";
+    index = (index + 1) % images.length;
+  }
+  
+  // Change the background image every 3 seconds
+  intervalId = setInterval(changeBackground, 3000);
+  
+  // Pause on hover
+  document.querySelector(".home").addEventListener("mouseover", function() {
+    clearInterval(intervalId);
+  });
+  
+  // Resume when not hovering
+  document.querySelector(".home").addEventListener("mouseout", function() {
+    intervalId = setInterval(changeBackground, 3000);
+  });
+
+    </script>
  </body> 
   <script src="script.js"></script>
-  <script>
-// Array of images
-var images = ["/images/capeTownSandy.jpg", "/images/capeTownTourists.jpg", "/images/back2.jpg", "/images/godsWindow.jpg","/images/mpumalangaTourist.jpg"];
-var index = 0;
-var intervalId;
-
-// Function to change the background image
-function changeBackground() {
-  document.querySelector(".home").style.backgroundImage = "url(" + images[index] + ")";
-  index = (index + 1) % images.length;
-}
-
-// Change the background image every 3 seconds
-intervalId = setInterval(changeBackground, 3000);
-
-// Pause on hover
-document.querySelector(".home").addEventListener("mouseover", function() {
-  clearInterval(intervalId);
-});
-
-// Resume when not hovering
-document.querySelector(".home").addEventListener("mouseout", function() {
-  intervalId = setInterval(changeBackground, 3000);
-});
-  </script>
+ 
 </html>
