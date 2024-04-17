@@ -23,7 +23,7 @@ function navFunction() {
 }
 //end of hamburger
  
-// Our services slide show. Get the button
+// Our services slide show. Get the button 
 document.addEventListener("DOMContentLoaded", function () {
   const scrollContainer = document.getElementById("scrollContainer");
   const leftArrow = document.querySelector(".left-arrow");  
